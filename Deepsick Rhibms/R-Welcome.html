@@ -1,0 +1,169 @@
+<html>
+<head>
+  <title>Login UI</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main Container */
+.container {
+  background-color: white;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  animation: 0.6s ease-in-out;
+}
+
+/* Background Image */
+.top-section {
+  height: 280px;
+  overflow: hidden;
+}
+
+.background-img {
+  margin-top: 5px;
+  width: 70%;
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.background-img:hover {
+  transform: scale(1.1);
+}
+
+/* Logo and Branding */
+.logo {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.logo h2 {
+  font-size: 30px;
+  color: #222;
+}
+
+.logo span {
+  color: #f10c0c;
+}
+
+/* Buttons Section */
+.buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-btn, .signup-btn {
+  width: 80%;
+  padding: 12px 0;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-btn {
+  background-color: rgb(223, 12, 12);
+  color: white;
+  border: none;
+}
+
+.login-btn:hover {
+  background-color: #b81c1c;
+}
+
+.signup-btn {
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+.signup-btn:hover {
+  background-color: #e9dede;
+}
+
+/* Guest Section */
+.guest {
+  font-size: 14px;
+  color: gray;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+ a{
+  text-decoration: none;
+}
+.guest:hover {
+  color: #d51010;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    top: 0;
+    width: 100%;
+  }
+
+  .background-img {
+    height: 200px;
+  }
+}
+
+/* Smooth Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-section">
+          <img src="rhibms_logo.jpg" alt="Background Image" class="background-img">
+        </div>
+        
+        <div class="content">
+          <div class="logo">
+            <h2>RHIBMS<span>CARE</span></h2>
+          </div>
+          
+          <div class="buttons">
+        <a  href="login.html"> <button  class="login-btn">Login</button></a>
+           <a href="signup.html"> <button class="signup-btn">Sign up</button></a>
+          </div>
+          
+         <a href="index.html"> <p class="guest">Continue as a Guest</p></a>
+        </div>
+      </div>
+    </body>
+    </html>    

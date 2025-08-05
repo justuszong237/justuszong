@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <style>
+    body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #d80202;
+  width: 100%;
+  max-width: 400px;
+}
+h2 {
+  color: #da3107;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+button {
+  padding: 10px;
+  background-color: #f70303;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+a {
+  color: #f50505;
+  text-decoration: none;
+}
+.logo {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.logo img {
+   margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+.logo h2 {
+  font-size: 30px;
+  color: #f8f2f2;
+}
+
+.logo span {
+  color: #f10c0c;
+}
+.form-group input,
+.form-group textarea, select {
+    width: 100%;
+    text-transform: capitalize;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+      <div class="logo">
+            <img src="rhibms_logo.jpg" alt="Logo">
+            <h2>RHIBMS<span>CARE</span></h2>
+          </div>
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <input type="text" id="fullName" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+          <select>
+                <option value=""> Select Department</option>
+                <option value="Computer Software Engineering">Computer Software Engineering</option>
+                <option value="Biomedical">Biomedical</option>
+                <option value="Management">Management</option>
+            </select>
+      <input type="text" id="fullName" placeholder="Matricule Number" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+      <button type="submit">Create Account</button>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+  </div>
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const fullName = document.getElementById("fullName").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
+
+  localStorage.setItem("user", JSON.stringify({ fullName, email, password }));
+  alert("Account created successfully!");
+  window.location.href = "login.html";
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J~J"s Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="start-screen" class="start-screen">
+            <h1>Welcome To J~J's Interative Quiz App</h1>
+            <p>Test your knowledge with this quiz questions!</p>
+            <button id="start-btn" class="btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="quiz-screen hidden">
+            <div class="timer-container">
+                <div id="timer" class="timer">30</div>
+            </div>
+            <div id="question" class="question"></div>
+            <div id="options" class="options"></div>
+            <button id="next-btn" class="btn hidden">Next Question</button>
+        </div>
+
+        <div id="result-screen" class="result-screen hidden">
+            <h2>Quiz Completed!</h2>
+            <p id="score-text">Your score: <span id="score">0</span>/<span id="total">0</span></p>
+            <button id="restart-btn" class="btn">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
